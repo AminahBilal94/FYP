@@ -1,0 +1,14 @@
+<div class="text-center">
+    
+    <legend>Choose your Topic </legend>
+    <div >
+      <button type="button" class="btn btn-primary" ng-click="setTopic(0)">English</button>
+      <button type="button" class="btn btn-primary" ng-click="setTopic(2)">Chemistry</button>
+      <button type="button" class="btn btn-primary" ng-click="setTopic(4)">Physics</button>
+      <button type="button" class="btn btn-primary" ng-click="setTopic(4)">Maths</button>
+    </div>
+    <br>
+    <div>
+        <a href="#quiz" class="btn btn-info btn-lg" ng-click='startGame()' ng-disabled="!setTopic">START</a>
+    </div>
+</div>

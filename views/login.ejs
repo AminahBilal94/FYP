@@ -1,0 +1,67 @@
+﻿<head>
+<style>
+.colorgraph {
+  height: 7px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}</style>
+
+</head>
+<body np-app="myApp" ng-controller="myController">
+<%- include('partials/header') %>
+<div class="form-container">
+ 
+   <hr class="colorgraph"><br>
+    
+    <hr class="colorgraph"><br>
+    <legend>Login</legend>
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    <form method="post">
+        <div class="form-group">
+
+            <label for="username"></label>
+            <div class="form-group">
+            <div class="input-group">
+            
+                        <span class="input-group-addon">
+                           <i class="glyphicon glyphicon-user"></i>
+                        </span>
+            <input type="text" name="username"  id="username" value="<%= locals.username || '' %>" class="form-control" />
+            </div>
+                      </div>
+        </div>
+        <div class="form-group">
+
+            <label for="password"></label>
+            <div class="form-group">
+            <div class="input-group">
+            
+                        <span class="input-group-addon">
+                           <i class="glyphicon glyphicon-user"></i>
+                        </span>
+
+            <input type="password" name="password" id="password" class="form-control" />
+            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="/register" class="btn btn-link">Register</a>
+        </div>
+    </form>
+<hr class="colorgraph"><br>
+</div>
+
+
+
+<%- include('partials/footer') %>

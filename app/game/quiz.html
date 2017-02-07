@@ -1,0 +1,70 @@
+<style type="text/css">
+  .btn {
+    margin: 10px auto;
+}
+.button{
+   background-color: black;
+}
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<div>
+   <div ng-show="user_in">
+       <!---user_in-->
+       <div class="container">
+       <div class="row">
+    <div class="col-xs-7 col-sm-5 col-md-7 col-sm-offset-3 col-md-offset-4">
+           <div ng-show="quiz_box">
+               <div >
+                   <h2>{{current_q.question}} </h2>
+                   <ul style="list-style: none;">
+                   <div class='container'>
+      <div class='row'>
+        
+          <div class="row-fluid">
+                       <li><button type="button"   ng-model="u_ans"   value="a1"  name="u_a" class="button btn btn-primary"> {{current_q.a_1}} </button></li>
+                       </div>
+                        <div class="row-fluid">
+                       <li><button type="button"   ng-model="u_ans"   value="a2"  name="u_a" class=" button btn btn-primary"> {{current_q.a_2}}</button></li>
+                       </div>
+                        <div class="row-fluid">
+                       <li><button type="button"   ng-model="u_ans"   value="a3"  name="u_a" class=" button btn btn-primary"> {{current_q.a_3}}</button></li>
+                       </div>
+                        <div class="row-fluid">
+                       <li><button type="button"   ng-model="u_ans"   value="a3"  name="u_a" class=" button btn btn-primary"> {{current_q.a_4}}</button></li>
+                       </div>
+                   </ul>
+               </div>
+               <p style="color: red">{{err_message}}</p>
+               <button ng-show="prev_btn" class="btn btn-warning" ng-click="change_q('prev')">Previous</button>
+               <button ng-show="next_btn" class="btn btn-success" ng-click="change_q('next')" >Next</button>
+               
+           </div>
+       <div ng-show="result_box" class="row">
+
+           <button ng-show="result_btn" class="btn btn-primary" ng-click="generate_result()" > Show Result</button>
+           <h3>Your Result </h3>
+           <br>
+           <div class="col-lg-6" >
+
+               <progress percent="dynamicObject" class="progress-striped active"></progress>
+
+           <p>You Scored: {{rite_percentage}}%</p>
+              <button class="btn btn-danger" ng-click="go('/takeQuiz_pg')">Rematch</button>
+               
+           </div>
+
+       </div>
+
+     </div>
+    </div>=
+
+
+
+
+</div>

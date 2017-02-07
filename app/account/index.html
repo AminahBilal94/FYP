@@ -1,0 +1,40 @@
+﻿
+</style>
+<div class="form-container">
+<div class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-3">
+        <form role="form">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+<legend><h2>My Account</h2></legend>
+<div class="form-container">
+
+    <form method="post">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" class="form-control" ng-model="vm.user.lastName" required />
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" ng-model="vm.user.username" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" ng-model="vm.user.password" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.saveUser()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deleteUser()">Delete Account</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+

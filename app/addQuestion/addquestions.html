@@ -1,0 +1,27 @@
+<html ng-app="addquestion">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+      var addquestion = angular.module('addquestion', []);
+      addquestion.controller('NameCtrl', function ($scope){
+        $scope.questions = ['Larry', 'Curly', 'Moe'];
+
+        $scope.addQuestions = function() {
+          $scope.questions.push($scope.enteredQuestion);
+        };
+      });
+    </script>
+  </head>
+  <body ng-controller="QuestionCtrl">
+  
+    <ul>
+      <li ng-repeat="question in questions">{{questions}}</li>
+    </ul>
+    <form ng-submit="addQuestions()">
+      <input type="text" ng-model="enteredQuestion">
+      <input type="submit" value="add">
+    </form>
+  </body>
+</html>
